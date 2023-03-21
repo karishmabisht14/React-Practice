@@ -3,14 +3,14 @@ import ExpenseDate from "./ExpenseDate";
 import ExpenseDetails from "./ExpenseDetails";
 import Card from "../UI/Card";
 
-const ExpenseItem = (props) => {
+const ExpenseItem = ({date, title, location, amount}) => {
   return (
     <Card className="expense-item">
-      <ExpenseDate date={props.date} />
+      <ExpenseDate date={date} />
       <ExpenseDetails
-        title={props.title}
-        location={props.location}
-        amount={props.amount}
+        title={title}
+        location={location}
+        amount={amount}
       />
     </Card>
   );
