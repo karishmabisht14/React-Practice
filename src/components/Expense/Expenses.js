@@ -1,6 +1,7 @@
-import ExpenseItem from "./ExpenseItem";
 import "./Expenses.css";
 import Card from "../UI/Card";
+
+import ExpenseItem from "./ExpenseItem";
 
 function Expenses(props) {
   return (  
@@ -17,8 +18,8 @@ function Expenses(props) {
           />
           )          
         })
-      }
-    </Card>
+      }    
+    </Card>   
   )
 }
 
