@@ -3,15 +3,20 @@ import ExpenseDate from "./ExpenseDate";
 import ExpenseDetails from "./ExpenseDetails";
 import Card from "../UI/Card";
 
-const ExpenseItem = ({date, title, location, amount}) => {
+const ExpenseItem = (props) => {
+  const deleteItems = () => {
+    console.log('Expense is deleted')
+  }
+
   return (
     <Card className="expense-item">
-      <ExpenseDate date={date} />
+      <ExpenseDate date={props.date} />
       <ExpenseDetails
-        title={title}
-        location={location}
-        amount={amount}
+        title={props.title}
+        location={props.location}
+        amount={props.amount}
       />
+      <button onClick = {deleteItems}>Delete Expense</button>
     </Card>
   );
 }
